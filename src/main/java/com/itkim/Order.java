@@ -28,7 +28,7 @@ public class Order {
 
     private String Server;
 
-    private long Stamp;
+    private String Stamp;
 
     private int TimeLimit;
 
@@ -118,11 +118,11 @@ public class Order {
         Server = server;
     }
 
-    public long getStamp() {
+    public String getStamp() {
         return Stamp;
     }
 
-    public void setStamp(long stamp) {
+    public void setStamp(String stamp) {
         Stamp = stamp;
     }
 
@@ -160,22 +160,17 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "Create='" + Create + '\'' +
-                ", 总共的保证金=" + Ensure +
-                ", 安全保证金=" + Ensure1 +
-                ", 效率保证金=" + Ensure2 +
-                ", 游戏='" + Game + '\'' +
-                ", IsPub=" + IsPub +
-                ", 价格=" + Price +
-                ", SameCity='" + SameCity + '\'' +
-                ", SerialNo='" + SerialNo + '\'' +
-                ", 服='" + Server + '\'' +
-                ", Stamp=" + Stamp +
-                ", 代练时间限制(小时)=" + TimeLimit +
-                ", 标题='" + Title + '\'' +
-                ", 区='" + Zone + '\'' +
-                ", ZoneServerID='" + ZoneServerID + '\'' +
-                '}';
+        return "[" +
+                "标题：'" + Title + '\'' +
+                ", 发单人：'" + Create + '\'' +
+                ", 价格：" + Price +
+                ", 代练时间限制(小时)：" + TimeLimit +
+                ", 总共的保证金：" + Ensure +
+                ", 安全保证金：" + Ensure1 +
+                ", 效率保证金：" + Ensure2 +
+                ", 订单号：'" + SerialNo + '\'' +
+                ", 服：'" + Server + '\'' +
+                ", 区：'" + Zone + '\'' +
+                ']';
     }
 }
